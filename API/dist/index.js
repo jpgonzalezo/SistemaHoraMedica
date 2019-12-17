@@ -1,3 +1,9 @@
-"use strict";
+import app from './app';
 
-var hello = 'hello world';
+async function runApi() {
+  await app.listen(4000);
+  console.log("API run in localhost:4000");
+}
+
+;
+runApi();
