@@ -15,8 +15,6 @@ export class HeadersComponent implements OnInit {
   ngOnInit() {
   }
   public logout(): void{
-    this._loginService.logout().subscribe(
-        response => {if(response) {this._storageService.logout();}}
-    );
+    this._storageService.logout();
   }
 }
