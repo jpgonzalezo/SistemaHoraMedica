@@ -4,10 +4,10 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
-
+import { AuthorizatedGuard } from 'src/app/services/authorizated.guard';
 const routes: Routes =[
-    { path: 'profile',     component: ProfileComponent },
-    { path: 'login',          component: LoginComponent },
+    { path: 'profile', component: ProfileComponent, canActivate:[ AuthorizatedGuard ] },
+    { path: 'login', component: LoginComponent },
     { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
