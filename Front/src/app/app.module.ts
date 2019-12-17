@@ -6,11 +6,13 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import {HttpModule} from '@angular/http';
+import { FullCalendarModule } from '@fullcalendar/angular';
 //COMPONENT
 import { ProfileComponent } from './profile/profile.component';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HeadersComponent } from './shared/header/header.component';
 import { LoginComponent } from './login/login.component';
 
 
@@ -24,7 +26,8 @@ import { AuthorizatedGuard } from './services/authorizated.guard';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    HeadersComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { AuthorizatedGuard } from './services/authorizated.guard';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    FullCalendarModule,
     HttpModule
   ],
   providers: [
