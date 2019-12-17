@@ -55,9 +55,43 @@ export async function deleteReserve(req,res){
 
 export async function getReservesUser(req,res){
     try{
-        //const { userID } = req.params 
-        //const reserves = await Reserve.findAll({where:{userid : userID}});
-        res.json([]);
+        const { userid } = req.params 
+        const reserves = await Reserve.findAll({
+            attributes: ['id','userid','start','title','hour'],
+            where:{userid}
+        });
+        res.json(reserves);
+    } catch(e){
+        res.status(500).json({
+            message: 'Error in the server'
+        })
+    }
+}
+
+export async function updateReserve(req,res){
+    try{
+        const { reserveID } = req.params
+        const { start, title, hour } = req.body
+        const reserves = await Reserve.findAll({
+            attributes: ['id','userid','start','title','hour'],
+            order: [
+                ['id','DESC']
+            ]
+        })
+        if(reserves.length > 0){
+            reserves.forEach(async reserve =>{
+                if(reserve.id == reserveID){
+                    await reserve.update({
+                        start: start,
+                        title: title,
+                        hour: hour
+                    })
+                }
+            })
+        }
+        res.json({
+            message: 'Reserve updated successfully'
+        });
     } catch(e){
         res.status(500).json({
             message: 'Error in the server'
