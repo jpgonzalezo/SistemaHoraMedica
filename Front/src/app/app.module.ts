@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './services/login.service';
 import { StorageService } from './services/storage.service';
 import { AuthorizatedGuard } from './services/authorizated.guard';
+import { EventoService } from './services/evento.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { AuthorizatedGuard } from './services/authorizated.guard';
   providers: [
     LoginService,
     StorageService,
-    AuthorizatedGuard
+    AuthorizatedGuard,
+    EventoService
   ],
   bootstrap: [AppComponent]
 })
