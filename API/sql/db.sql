@@ -11,6 +11,3 @@ CREATE TABLE IF NOT EXISTS reserves(
     hour text,
     userid INTEGER REFERENCES users(id)
 );
-
-INSERT INTO users(fullname, email)
-    VALUES('user1', 'user1@gmail.com')
