@@ -8,6 +8,7 @@ import interactionPlugin from '@fullcalendar/interaction'; // for dateClick
 import swal from'sweetalert2';
 import { EventoService } from 'src/app/services/evento.service';
 import { StorageService } from 'src/app/services/storage.service';
+import * as $ from 'jquery';
 const HOURS = {
   "09:00:00":"09:00 am",
   "10:00:00":"10:00 am",
@@ -34,7 +35,7 @@ export class ProfileComponent implements OnInit {
     bootstrapPlugin = bootstrapPlugin
     esLocale = esLocale
     calendarPlugins = [dayGridPlugin, timeGrigPlugin, interactionPlugin, bootstrapPlugin];
-    calendarWeekends = false;
+    calendarWeekends = true;
     calendarEvents = [];
     load = false;
     constructor(
