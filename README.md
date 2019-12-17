@@ -1,5 +1,5 @@
 # SistemaHoraReuniones
-Ejemplo de sistema de reserva para sala de reuniones utilizando una API creada en NodeJS y Angular
+Ejemplo de sistema de reserva para sala de reuniones utilizando una API creada en NodeJS y una aplicación por el lado del cliente usando Angular, base de datos postgresSQL como base de datos y Sequelize como ORM. 
 
 ## Pre-requisitos 📋
 Para instalar este proyecto necesitas instalar previamente.
