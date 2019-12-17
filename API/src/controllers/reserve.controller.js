@@ -39,6 +39,20 @@ export async function getReserves(req,res){
 
 }
 
+export async function deleteReserve(req,res){
+    try{
+        const { reserveID } = req.params 
+        const reserve = await Reserve.destroy({where:{id : reserveID}});
+        res.json({
+            message: 'Reserve deleted successfully'
+        });
+    } catch(e){
+        res.status(500).json({
+            message: 'Error in the server'
+        })
+    }
+}
+
 export async function getReservesUser(req,res){
     try{
         //const { userID } = req.params 
