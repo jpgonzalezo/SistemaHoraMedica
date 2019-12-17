@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 //COMPONENT
 import { ProfileComponent } from './profile/profile.component';
 import { AppComponent } from './app.component';
@@ -14,7 +15,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeadersComponent } from './shared/header/header.component';
 import { LoginComponent } from './login/login.component';
-
+import { ReservesComponent } from './reserves/reserves.component';
 
 //SERVICES
 import { LoginService } from './services/login.service';
@@ -28,7 +29,8 @@ import { EventoService } from './services/evento.service';
     FooterComponent,
     LoginComponent,
     ProfileComponent,
-    HeadersComponent
+    HeadersComponent,
+    ReservesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,8 @@ import { EventoService } from './services/evento.service';
     AppRoutingModule,
     HttpClientModule,
     FullCalendarModule,
+    NgbPaginationModule,
+    NgbAlertModule,
     HttpModule
   ],
   providers: [

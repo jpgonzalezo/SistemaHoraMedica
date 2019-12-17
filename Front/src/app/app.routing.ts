@@ -3,10 +3,12 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
+import { ReservesComponent } from './reserves/reserves.component';
 import { LoginComponent } from './login/login.component';
 import { AuthorizatedGuard } from 'src/app/services/authorizated.guard';
 const routes: Routes =[
     { path: 'profile', component: ProfileComponent, canActivate:[ AuthorizatedGuard ] },
+    { path: 'reserves', component: ReservesComponent, canActivate:[ AuthorizatedGuard ] },
     { path: 'login', component: LoginComponent },
     { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
