@@ -8,7 +8,7 @@ const Reserve = sequelize.define('reserves', {
   date: {
     type: Sequelize.DATE
   },
-  userId: {
+  userid: {
     type: Sequelize.INTEGER
   }
 }, {

@@ -16,6 +16,6 @@ const User = sequelize.define('users', {
     timestamps: false
 });
 
-User.hasMany(Reserve, {foreingKey: 'userId', sourceKey: 'id'})
-Reserve.belongsTo(User, {foreingKey: 'userId', sourceKey: 'id'} )
+User.hasMany(Reserve, {foreingKey: 'userid', sourceKey: 'id'})
+Reserve.belongsTo(User, {foreingKey: 'userid', sourceKey: 'id'} )
 export default User;
