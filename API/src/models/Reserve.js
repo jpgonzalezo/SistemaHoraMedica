@@ -6,10 +6,16 @@ const Reserve = sequelize.define('reserves', {
         type: Sequelize.INTEGER,
         primaryKey: true
     },
-    date : {
+    start : {
         type: Sequelize.DATE
     },
-    userId: {
+    title: {
+        type: Sequelize.TEXT
+    },
+    hour: {
+        type: Sequelize.TEXT
+    },
+    userid: {
         type: Sequelize.INTEGER
     }
 },{
