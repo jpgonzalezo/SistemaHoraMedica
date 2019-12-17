@@ -3,12 +3,12 @@
     <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
         <li class="nav-item d-none d-lg-block ml-lg-4">
-          <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
+          <button class="btn btn-neutral btn-icon" (click)="createUser()">
             <span class="btn-inner--icon">
               <i class="fa fa-user"></i>
             </span>
             <span class="nav-link-inner--text">Crear usuario</span>
-          </a>
+          </button>
         </li>
       </ul>
     </div>

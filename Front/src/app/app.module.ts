@@ -22,6 +22,7 @@ import { LoginService } from './services/login.service';
 import { StorageService } from './services/storage.service';
 import { AuthorizatedGuard } from './services/authorizated.guard';
 import { EventoService } from './services/evento.service';
+import { UserService } from './services/user.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { EventoService } from './services/evento.service';
     LoginService,
     StorageService,
     AuthorizatedGuard,
-    EventoService
+    EventoService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
