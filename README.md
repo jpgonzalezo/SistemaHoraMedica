@@ -10,7 +10,7 @@ Para instalar este proyecto necesitas instalar previamente.
 - angular
 ```
 
-Una vez instalado `postgres` y `postgres` deberás crear la base de datos. Para ello utiliza las consultas sql que se encuentran en `API/sql/db.sql`.
+Una vez instalado `postgres` y `pgadmin` deberás crear la base de datos. Para ello utiliza las consultas sql que se encuentran en `API/sql/db.sql`.
 
 ## Configuraciones 🚀
 Asegurate de que la `API` esté accediendo a la base de datos correcta. Para eso deberás corroborar la configuración que se encuentra en el archivo `API/src/database/database.js`. Los argumentos de entrada de la varibale `sequelize` son (`nombre_base_de_datos`,`nombre_usuario`,`password`,`opciones`). Dentro del argumento opciones asegurate de que el `host` y `port` sean los correctos para garantizar una correcta conexión con la base de datos.
