@@ -3,16 +3,30 @@ import User from '../models/User';
 export async function createUser(req,res){
     const { fullname, email } = req.body
     try{
-        let newUser = await User.create({
-            fullname: fullname,
-            email: email
-        }, {
-            fields: ['fullname','email']
-        });
-        if(newUser){
+        var newUser = await User.findOne({where:{fullname : fullname}});
+        if(newUser!=null){
             return res.json({
-                message: 'User created successfully'
+                message: 'Fullname registered'
             });
+        }
+        newUser = await User.findOne({where:{email : email}});
+        if(newUser!=null){
+            return res.json({
+                message: 'Email registered'
+            });
+        }
+        else{
+            newUser = await User.create({
+                fullname: fullname,
+                email: email
+            }, {
+                fields: ['fullname','email']
+            });
+            if(newUser){
+                return res.json({
+                    message: 'User created successfully'
+                });
+            }
         }
     } catch(e){
         res.status(500).json({
