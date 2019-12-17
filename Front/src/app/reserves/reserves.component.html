@@ -35,7 +35,7 @@
                       </tr>
                       <tr *ngIf="!load && eventos_tabla.length == 0">
                         <td colspan="10" class="text-center">
-                          No se registran eventos
+                          No se registran reservas
                         </td>
                       </tr>
                       <tr *ngFor="let evento of eventos_tabla">
@@ -44,6 +44,8 @@
                         <td>{{ evento.title }}</td>
                         <td>
                           <div class="row">
+                            <button type="button" class="btn btn-default btn-sm"
+                              (click)="editReserva( evento )"><i class="far fa-edit"></i></button>
                             <button type="button" class="btn btn-danger btn-sm" (click)="deleteEvento(evento.id)"><i
                                 class="fas fa-trash-alt"></i></button>
                           </div>
